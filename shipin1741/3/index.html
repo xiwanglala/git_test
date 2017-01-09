@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Home</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme CSS -->
+<link href="css/creative.min.css" rel="stylesheet">
+<link href="jQuery图标按钮控制选项卡切换代码/css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="jQuery图标按钮控制选项卡切换代码/js/jquery-1.7.2.min.js" ></script>
+<script type="text/javascript">
+
+
+$(function(){
+	/**软件功能切换js**/
+	$(".soft_con_icon ul li a").mouseover(function(){
+		var id = $(this).attr("id");
+		var x=$(this).parent().index();
+		$(this).children("p").css({"color":"#008dd9"}).parent().parent().siblings().children().children("p").css({"color":"#333333"});
+		var src1=id+"_hover.gif"
+		$(".soft_con_icon ul li a").each(function(index, element) {
+         	var other_id = $(this).attr("id");
+			if(id == other_id){
+			   $(this).children("img").attr("src","images/"+src1);
+			}else{
+			   var src2 = other_id+".gif";
+			   $(this).children("img").attr("src","images/"+src2);
+			}
+        });
+		if(x==0){
+		   $("#xzgl").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":" url(images/line_select_001.gif)"});
+		}else if(x==1){
+		   $("#crm").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_002.gif)"});
+		}else if(x==2){
+		   $("#xmgl").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_003.gif)"});
+		}else if(x==3){
+		   $("#zsgl").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_004.gif)"});
+		}else{
+		   $("#ydbg").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_005.gif)"});
+		}
+	});
+	
+});
+</script>
+
+
+
+
+</head>
+
+<body id="page-top">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+			</button>
+			<a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo1.png" width="121" height="49"></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="page-scroll" href="../1/Untitled-2.html">首页</a>
+				</li>
+				<li>
+					<a  href="../5/index.html">案例</a>
+				</li>
+				<li>
+					<a  href="../2/index.html">摄影</a>
+				</li>
+				<li>
+					<a  href="../4/index.html">手绘</a>
+				</li>
+                <li>
+					<a href="#">关于我们</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+<header>
+	<div class="header-content">
+		<div class="header-content-inner">
+			<h1 id="homeHeading">欢迎来到我们的团队</h1>
+			<hr>
+			<p>WE ARE AN INNOVATIVE TEAM </p>
+			<a href="#about" class="btn btn-primary btn-xl page-scroll">发现更多</a>
+		</div>
+	</div>
+</header>
+
+<section class="bg-primary" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<p class="text-faded">    为了保证客户与彩域的业务合作能高效顺畅进行，请先了解彩域对于品牌设计合作的一些业务规则。在咨询之前，请您先用10分钟浏览网站并对彩域的设计报价和设计水平做一个大概的了解，以判断彩域的设计水准和价格是否适合您。因为彼此的欣赏和信任才会有良好的合作，不想出现您盲目的选择或者放弃彩域.</p>
+				
+	
+</div>
+				
+			</div>
+		</div>
+	</div>
+    
+</section>
+
+			<div class="soft_function">
+	<div class="soft_con_icon"><p>
+	  <ul>
+			<li><a id="pic_fun_adm" href="#">
+	    <p style="color:#008dd9">合作步骤</p></a></li>
+            
+			<li><a id="pic_fun_crm" href="#">
+<p>合作须知</p></a></li>
+			
+			<li><a id="pic_fun_k" href="#">
+			  <p>外地客户合作</p></a></li>
+			<li><a id="pic_fun_mobile" href="#">
+			  <p>我们的优势</p></a></li>
+		</ul>
+	</div> 
+
+	<div class="soft_con1" style="background: url(jQuery%E5%9B%BE%E6%A0%87%E6%8C%89%E9%92%AE%E6%8E%A7%E5%88%B6%E9%80%89%E9%A1%B9%E5%8D%A1%E5%88%87%E6%8D%A2%E4%BB%A3%E7%A0%81/images/line_select_001.gif);"></div>
+
+	<div class="soft_con">
+
+		<div id="xzgl" class="soft_con2">
+			<div class="function1">
+				<p class="p1">了解彩域</p>
+				<p class="p2">了解彩域的案例和工作风格确认彩域的专业能力是否已符合贵方要求,请详细浏览彩域网站或致电与我们沟通<br />彩域对所确认项目提供标准报价认可我方报价后预约双方确定服务项目并签定服务合同，预付款支付</p>
+			</div>
+			<div class="function1">
+			  <p class="p1">项目启动/结束</p>
+				<p class="p2">彩域对所确认项目提供标准报价认可我方报价后预约双方确定服务项目并签定服务合同，预付款支付<br />我司成立项目组明确项目组人员分工，熟悉客户基本资料并开展内部调研与外部调研，整体策划设计思路、阶段划分进行研讨、确认</p>
+			</div>
+			<div class="function1">
+			  <p class="p1">方案</p>
+				<p class="p2">项目组研讨，根据阶段划分、按时提交策划设计方案，项目经理审查项目组整体方案，项目组对方案进行研讨、修正，最终方案正式提交<br />提交策划设计方案,与客户高层、企业项目组进行沟通,企业提出初步改善建议、意思,对方案进行修订完善,我司提交方案的最终确定</p>
+			</div>
+			<div class="function2">
+				
+				<p class="p1">项目咨询</p>
+				<p class="p2">沟通项目详情，确认项目需求是否处于彩域设计的服务范围与能力范围<br />彩域对所确认项目提供标准报价认可我方报价后预约双方确定服务项目并签定服务合同，预付款支付</p>
+			</div>
+		</div>
+	
+		<div id="crm" class="soft_con2" style="display:none">
+			<div class="function1">
+				<img src="jQuery图标按钮控制选项卡切换代码/images/pic_fun_project_detailed_001.gif"/>
+				<p class="p1">我们不参与无合同约束的设计投标比稿</p>
+				
+			</div>
+			<div class="function1">
+				<img  src="jQuery图标按钮控制选项卡切换代码/images/pic_fun_project_detailed_002.gif"/>
+				<p class="p1">所有设计项目均需提前签订正式合同，并支付预付款</p>
+				
+			</div>
+			<div class="function1">
+				<img src="jQuery图标按钮控制选项卡切换代码/images/pic_fun_project_detailed_003.gif"/>
+				<p class="p1">我们建议与决策者直接沟通</p>
+				
+			</div>
+			<div class="function2">
+				<img src="jQuery图标按钮控制选项卡切换代码/images/pic_fun_project_detailed_004.gif"/>
+				<p class="p1">我们务实，对所有客人都一视同仁</p>
+				
+			</div>
+		</div>
+        
+	
+    
+		
+		<div id="xmgl" class="soft_con2" style="display:none">
+			<div class="function1">
+				
+				<p class="p2">不用担心距离！彩域一流的设计服务就在您身边，随着互联网的迅速发展，空间上的距离已经不是阻碍远程合作的问题。彩域依托强大的网络平台和便捷的客户协作系统，与全国各地的企业建立了良好的业务关系，通过网上提案、电话沟通、传真签定合同、QQ在线交换意见等为您的企业提供优质的品牌设计服务。</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p2">彩域的设计业务不会只局限在已有的事业部城市，为了能够更好的把彩域设计的品牌设计能力辐射到全国各地，彩域设立了对远程客户品牌视觉设计的解决方案，为客户提供更加贴心的服务，为了能够更直观的让客户了解彩域服务过远程客户的成功案例，我们简单的列举了以下几个与远程客户的合作项目。</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p2">为了让客户更方便快捷地与创作人员进行沟通、互动，任何一个与我们合作的客户，除了通过面对面的沟通交流，我们可使用E-mail或是在线联络工具等方式进行沟通。进行项目稿件进度的查看与修改意见的提交，你需要的只是身边拥有一台可以连接互联网的电脑。无论您在何地，与我们联系，您都将得到满意的服务！..</p>
+			</div>
+			
+		</div>
+
+	
+		<div id="zsgl" class="soft_con2" style="display:none">
+			<div class="function1">
+				
+				<p class="p1">15年专业历程(2000-2014)</p>
+				<p class="p2">15年来，彩域成功为多种行业、提供高品质的商业设计服务，一直深受客户盛赞。其秘诀就在于我们能永续保持对客户的热诚，对自己所从事的工作的认真与对自我的不断超越</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p1">稳定的核心创作团队</p>
+				<p class="p2">我们拥有稳定的充满创作激情的设计团队，核心人员由公司创立至今伴随我们一个又一个客户的成长，保证了稳定的设计出品质量及熟知我们所合作过的每一个客户的设计需求现在团队不断壮大。</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p1">务实并保持最高的职业素养</p>
+				<p class="p2">不浮夸、不吹嘘、脚踏实地，以我们一贯的坚持为我们所服务的客户提供满足市场需求的设计服务并不断创新
+<br />
+过往的设计案例中你可以看到不同行业，不同客户的设计案例，不用担心我们能否设计得好，第一次与我们沟通都会有这种疑问往往最后我们均能让客人惊喜。</p>
+			</div>
+			<div class="function2">
+				
+				<p class="p1">让你的设计投入得到最大的价值</p>
+				<p class="p2">卓越的信誉，优异的品质，真诚的服务，合适的价格，对于一家专业设计公司，这些一个都不能少。我们提供一个合理的设计费用，将为您节省更可观的浪费，及带来更多的设计收益。</p>
+			</div>
+		</div>
+	
+		</div>
+	<img src="img/portfolio/thumbnails/QQ图片20161222151330.jpg" width="1056" height="719"></div>
+
+
+
+	
+<section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="section-heading">北京。秦皇岛。通辽</h2>
+              
+				<p>版权所有 Copyright(C)2011-2012 北京彩域尚品文化传播有限公司 
+              京ICP备11019089号-1</p>
+			</div>
+			<div class="col-lg-4 col-lg-offset-2 text-center">
+				<i class="fa fa-phone fa-3x sr-contact"></i>
+				<p>010-69261219<br />13693018615</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<i class="fa fa-envelope-o fa-3x sr-contact"></i>
+				<p><span class="text-muted">aiyushangpin@163.com</span></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/creative.min.js"></script>
+
+</body>
+</html>

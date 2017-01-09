@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery图标按钮控制选项卡切换代码 - 素材家园（www.sucaijiayuan.com）</title>
+<link  type="text/css" href="css/style.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+	/**软件功能切换js**/
+	$(".soft_con_icon ul li a").mouseover(function(){
+		var id = $(this).attr("id");
+		var x=$(this).parent().index();
+		$(this).children("p").css({"color":"#008dd9"}).parent().parent().siblings().children().children("p").css({"color":"#333333"});
+		var src1=id+"_hover.gif"
+		$(".soft_con_icon ul li a").each(function(index, element) {
+         	var other_id = $(this).attr("id");
+			if(id == other_id){
+			   $(this).children("img").attr("src","images/"+src1);
+			}else{
+			   var src2 = other_id+".gif";
+			   $(this).children("img").attr("src","images/"+src2);
+			}
+        });
+		if(x==0){
+		   $("#xzgl").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":" url(images/line_select_001.gif)"});
+		}else if(x==1){
+		   $("#crm").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_002.gif)"});
+		}else if(x==2){
+		   $("#xmgl").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_003.gif)"});
+		}else if(x==3){
+		   $("#zsgl").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_004.gif)"});
+		}else{
+		   $("#ydbg").css({"display":"block"}).siblings().css({"display":"none"});
+		   $(".soft_con1").css({"background":"url(images/line_select_005.gif)"});
+		}
+	});
+	
+});
+</script>
+</head>
+<body>
+<div class="soft_function">
+	<div class="soft_con_icon">
+		<ul>
+			<li><a id="pic_fun_adm" href="#"><img src="images/pic_fun_adm_hover.gif" width="150" height="150"/><p style="color:#008dd9">合作步骤</p></a></li>
+            
+			<li><a id="pic_fun_crm" href="#"><img  src="images/pic_fun_crm.gif" width="150" height="150"/><p>合作须知</p></a></li>
+			
+			<li><a id="pic_fun_k" href="#"><img  src="images/pic_fun_k.gif" width="150" height="150"/><p>外地客户合作</p></a></li>
+			<li><a id="pic_fun_mobile" href="#"><img  src="images/pic_fun_mobile.gif" width="150" height="150"/><p>我们的优势</p></a></li>
+		</ul>
+	</div> 
+
+	<div class="soft_con1" style="background:url(images/line_select_001.gif);"></div>
+
+	<div class="soft_con">
+
+		<div id="xzgl" class="soft_con2">
+			<div class="function1">
+				
+				<p class="p1">了解彩域</p>
+				<p class="p2">了解彩域的案例和工作风格确认彩域的专业能力是否已符合贵方要求,请详细浏览彩域网站或致电与我们沟通<br />彩域对所确认项目提供标准报价认可我方报价后预约双方确定服务项目并签定服务合同，预付款支付</p>
+			</div>
+			<div class="function1">
+			  <p class="p1">项目启动/结束</p>
+				<p class="p2">彩域对所确认项目提供标准报价认可我方报价后预约双方确定服务项目并签定服务合同，预付款支付<br />我司成立项目组明确项目组人员分工，熟悉客户基本资料并开展内部调研与外部调研，整体策划设计思路、阶段划分进行研讨、确认</p>
+			</div>
+			<div class="function1">
+			  <p class="p1">方案</p>
+				<p class="p2">项目组研讨，根据阶段划分、按时提交策划设计方案，项目经理审查项目组整体方案，项目组对方案进行研讨、修正，最终方案正式提交<br />提交策划设计方案,与客户高层、企业项目组进行沟通,企业提出初步改善建议、意思,对方案进行修订完善,我司提交方案的最终确定</p>
+			</div>
+			<div class="function2">
+				
+				<p class="p1">项目咨询</p>
+				<p class="p2">沟通项目详情，确认项目需求是否处于彩域设计的服务范围与能力范围<br />彩域对所确认项目提供标准报价认可我方报价后预约双方确定服务项目并签定服务合同，预付款支付</p>
+			</div>
+		</div>
+	
+		<div id="crm" class="soft_con2" style="display:none">
+			<div class="function1">
+				<img src="images/pic_fun_crm_detailed_001.gif"/>
+				<p class="p1">我们不参与无合同约束的设计投标比稿</p>
+				
+			</div>
+			<div class="function1">
+				<img src="images/pic_fun_crm_detailed_002.gif"/>
+				<p class="p1">所有设计项目均需提前签订正式合同，并支付预付款</p>
+				
+			</div>
+			<div class="function1">
+				<img src="images/pic_fun_crm_detailed_003.gif"/>
+				<p class="p1">我们建议与决策者直接沟通</p>
+				
+			</div>
+			<div class="function2">
+				<img src="images/pic_fun_crm_detailed_004.gif"/>
+				<p class="p1">我们务实，对所有客人都一视同仁</p>
+				
+			</div>
+		</div>
+        
+	
+    
+		
+		<div id="xmgl" class="soft_con2" style="display:none">
+			<div class="function1">
+				
+				<p class="p2">不用担心距离！彩域一流的设计服务就在您身边，随着互联网的迅速发展，空间上的距离已经不是阻碍远程合作的问题。彩域依托强大的网络平台和便捷的客户协作系统，与全国各地的企业建立了良好的业务关系，通过网上提案、电话沟通、传真签定合同、QQ在线交换意见等为您的企业提供优质的品牌设计服务。</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p2">彩域的设计业务不会只局限在已有的事业部城市，为了能够更好的把彩域设计的品牌设计能力辐射到全国各地，彩域设立了对远程客户品牌视觉设计的解决方案，为客户提供更加贴心的服务，为了能够更直观的让客户了解彩域服务过远程客户的成功案例，我们简单的列举了以下几个与远程客户的合作项目。</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p2">为了让客户更方便快捷地与创作人员进行沟通、互动，任何一个与我们合作的客户，除了通过面对面的沟通交流，我们可使用E-mail或是在线联络工具等方式进行沟通。进行项目稿件进度的查看与修改意见的提交，你需要的只是身边拥有一台可以连接互联网的电脑。无论您在何地，与我们联系，您都将得到满意的服务！..</p>
+			</div>
+			
+		</div>
+
+	
+		<div id="zsgl" class="soft_con2" style="display:none">
+			<div class="function1">
+				
+				<p class="p1">15年专业历程(2000-2014)</p>
+				<p class="p2">15年来，彩域成功为多种行业、提供高品质的商业设计服务，一直深受客户盛赞。其秘诀就在于我们能永续保持对客户的热诚，对自己所从事的工作的认真与对自我的不断超越</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p1">稳定的核心创作团队</p>
+				<p class="p2">我们拥有稳定的充满创作激情的设计团队，核心人员由公司创立至今伴随我们一个又一个客户的成长，保证了稳定的设计出品质量及熟知我们所合作过的每一个客户的设计需求现在团队不断壮大。</p>
+			</div>
+			<div class="function1">
+				
+				<p class="p1">务实并保持最高的职业素养</p>
+				<p class="p2">不浮夸、不吹嘘、脚踏实地，以我们一贯的坚持为我们所服务的客户提供满足市场需求的设计服务并不断创新
+<br />
+过往的设计案例中你可以看到不同行业，不同客户的设计案例，不用担心我们能否设计得好，第一次与我们沟通都会有这种疑问往往最后我们均能让客人惊喜。</p>
+			</div>
+			<div class="function2">
+				
+				<p class="p1">让你的设计投入得到最大的价值</p>
+				<p class="p2">卓越的信誉，优异的品质，真诚的服务，合适的价格，对于一家专业设计公司，这些一个都不能少。我们提供一个合理的设计费用，将为您节省更可观的浪费，及带来更多的设计收益。</p>
+			</div>
+		</div>
+	
+		<div id="ydbg" class="soft_con2" style="display:none">
+			<div class="function1">
+				<img src="images/pic_fun_mobile_detailed_001.gif"/>
+				<p class="p1">通讯录</p>
+				<p class="p2">企业通讯录，无需手动录入，自动加载平台员工的联系方式；可...</p>
+			</div>
+			<div class="function1">
+				<img src="images/pic_fun_mobile_detailed_002.gif" />
+				<p class="p1">移动审批</p>
+				<p class="p2">即使不在电脑前，也无需等待。通过手机端的移动审批可快速的...</p>
+			</div>
+			<div class="function1">
+				<img src="images/pic_fun_mobile_detailed_003.gif"/>
+				<p class="p1">日程安排</p>
+				<p class="p2">制定个人的日程安排，支持对周期性日程的批量添加，并可设置...</p>
+			</div>
+			<div class="function2">
+				<img src="images/pic_fun_mobile_detailed_004.gif"/>
+				<p class="p1">定位签到</p>
+				<p class="p2">外出无法签到，也不再是难事；通过手机端即可实现快速的签...</p>
+			</div>
+		</div>
+	
+	</div>
+</div>
+</body>
+</html>

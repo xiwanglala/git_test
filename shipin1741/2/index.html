@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Home</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Plugin CSS -->
+<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme CSS -->
+<link href="css/creative.min.css" rel="stylesheet">
+<script src="js/大图轮播js/jquery-2.2.4.js"></script>
+<style type="text/css">
+* {
+margin: 0px;
+padding: 0px;
+font-size: 14px;
+}
+div.LunBo {
+position: relative;
+list-style-type: none;
+height: 450px;
+/*width: 600px;*/
+	width: 100%;
+}
+div.LunBo ul li {
+position: absolute;
+height: 450px;
+/*width: 600px;*/
+left: 0px;
+	width: 100%;
+top: 0px;
+display: none;
+}
+
+div.LunBo div.LunBoNum {
+position: absolute;
+left: 500px;
+bottom:7px;
+width: 83px;
+text-align: right;
+background-color: #F78344;
+padding-left: 10px;
+}
+div.LunBo div.LunBoNum span {
+height: 20px;
+width: 15px;
+display: block;
+line-height: 20px;
+text-align: center;
+margin-top: 5px;
+margin-bottom: 5px;
+float: left;
+cursor: pointer;
+}
+div.LunBo div.LunBoNum span.CurrentNum {
+background-color:#333;
+}
+</style>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page-top">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+			</button>
+			<a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo1.png" width="121" height="49"></a>
+		</div>s
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a  href="../1/Untitled-2.html">首页</a>
+				</li>
+				<li>
+					<a href="../5/index.html">案例</a>
+				</li>
+				<li>
+					<a  href="#">摄影</a>
+				</li>
+				<li>
+					<a href="../4/index.html">手绘</a>
+				</li>
+                <li>
+					<a href="../3/index.html">关于我们</a>
+                    </li>
+                   
+                   
+				 <ul>
+ 
+</ul>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+<header>
+	<div class="header-content">
+    
+    <div class="LunBo">
+<ul>
+<li class="CurrentPic"> <img src="img/portfolio/thumbnails/444444.jpg"  height="475"></li>
+<li> <img src="img/portfolio/thumbnails/幻灯片1111.jpg" width="100%" height="475"></li>
+<li><img src="img/portfolio/thumbnails/幻灯片4.jpg" width="100%" height="475"></li>
+<li><img src="img/portfolio/thumbnails/222222.jpg" width="100%" height="475"></li>
+
+</ul>
+<div class="LunBoNum">
+<span class="CurrentNum">1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+
+</div>
+</div>
+<script type="text/javascript" language="javascript">
+var PicTotal = 5;
+var CurrentIndex;
+var ToDisplayPicNumber = 0;
+$("div.LunBo div.LunBoNum span").click(DisplayPic);
+function DisplayPic() {
+// 测试是父亲的第几个儿子
+CurrentIndex = $(this).index();
+// 删除所有同级兄弟的类属性
+$(this).parent().children().removeClass("CurrentNum")
+// 为当前元素添加类
+$(this).addClass("CurrentNum");
+// 隐藏全部图片
+var Pic = $(this).parent().parent().children("ul");
+$(Pic).children().hide();
+// 显示指定图片
+$(Pic).children("li").eq(CurrentIndex).show();
+}
+function PicNumClick() {
+$("div.LunBo div.LunBoNum span").eq(ToDisplayPicNumber).trigger("click");
+ToDisplayPicNumber = (ToDisplayPicNumber + 1) % PicTotal;
+setTimeout("PicNumClick()",1000);
+}
+setTimeout("PicNumClick()",1000);
+</script>
+     
+</div></div></div>
+
+</header>
+
+<section class="bg-primary" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="section-heading">摄影</h2>
+				
+			  <p class="text-faded">不管美食还是生活都为<br />
+			  你从摄影创造艺术，只为打造完美</p>
+			    <img src="img/portfolio/fullsize/未标题-1.png" width="741" height="433"></div>
+		</div>
+	</div>
+</section>
+
+<section id="services">
+	
+</section>
+
+<section class="no-padding" id="portfolio">
+	<div class="container-fluid">
+		<div class="row no-gutter popup-gallery">
+		 
+         
+<div class="col-lg-4 col-sm-6">
+		  <a href="img/portfolio/thumbnails/QQ图片20161222115441.jpg"  class="portfolio-box" ><img src="img/portfolio/thumbnails/QQ图片20161222115441.jpg" width="440" height="300">
+		  <div class="portfolio-box-caption">
+					<div class="portfolio-box-caption-content">
+							<div class="project-category text-faded">
+								点击放大
+					  </div>
+							
+				  </div>
+		  </div>
+		</a>
+		  </div>
+			<div class="col-lg-4 col-sm-6">
+				<a href="img/portfolio/thumbnails/QQ图片20161222115454.jpg"  class="portfolio-box">
+                <img src="img/portfolio/thumbnails/QQ图片20161222115454.jpg" width="440" height="300">
+				<div class="portfolio-box-caption">
+			<div class="portfolio-box-caption-content">
+				<div class="project-category text-faded">
+					点击放大
+			  </div>
+				
+	      </div>
+		  </div>
+				</a>
+			</div>
+			
+			<div class="col-lg-4 col-sm-6">
+				<a href="img/portfolio/thumbnails/QQ图片20161222115508.jpg" class="portfolio-box">
+                <img src="img/portfolio/thumbnails/QQ图片20161222115508.jpg" width="440" height="300">
+<div class="portfolio-box-caption">
+		  <div class="portfolio-box-caption-content">
+			  <div class="project-category text-faded">
+				  点击放大
+		    </div>
+				
+	      </div>
+		  </div>
+			  </a>
+		  </div>
+            
+			<div class="col-lg-4 col-sm-6">
+				<a href="img/portfolio/thumbnails/QQ图片20161222143821.jpg"  class="portfolio-box">
+                <img src="img/portfolio/thumbnails/QQ图片20161222143821.jpg" width="440" height="300" >
+				<div class="portfolio-box-caption">
+			<div class="portfolio-box-caption-content">
+					<div class="project-category text-faded">
+					点击放大
+			  </div>
+					
+		  </div>
+			</div>
+			  </a>
+		  </div>
+            
+			<div class="col-lg-4 col-sm-6">
+				<a href="img/portfolio/thumbnails/QQ图片20161222143835.jpg"  class="portfolio-box">
+                <img src="img/portfolio/thumbnails/QQ图片20161222143835.jpg" width="440" height="300">
+<div class="portfolio-box-caption">
+			<div class="portfolio-box-caption-content">
+					<div class="project-category text-faded">
+						点击放大
+			  </div>
+							
+		  </div>
+		  </div>
+			  </a>
+		  </div>
+			
+			<div class="col-lg-4 col-sm-6">
+			<a href="img/portfolio/thumbnails/QQ图片20161222164918.jpg" class="portfolio-box">
+            <img src="img/portfolio/thumbnails/QQ图片20161222164918.jpg" width="440" height="300">
+<div class="portfolio-box-caption">
+		  <div class="portfolio-box-caption-content">
+				  <div class="project-category text-faded">
+					  点击放大
+		    </div>
+					
+		  </div>
+		  </div>
+			  </a>
+		  </div>
+	  </div>
+  </div>
+</section>
+
+
+	</div>
+</aside>
+
+<section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="section-heading">北京。秦皇岛。通辽</h2>
+				
+				<p>版权所有 Copyright(C)2011-2012 北京彩域尚品文化传播有限公司 
+              京ICP备11019089号-1</p>
+			</div>
+			<div class="col-lg-4 col-lg-offset-2 text-center">
+				<i class="fa fa-phone fa-3x sr-contact"></i>
+				<p>010-69261219<br />13693018615</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<i class="fa fa-envelope-o fa-3x sr-contact"></i>
+				<p><span class="text-muted">aiyushangpin@163.com</span></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/creative.min.js"></script>
+
+</body>
+</html>
